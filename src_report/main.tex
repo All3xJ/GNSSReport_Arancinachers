@@ -1,0 +1,167 @@
+% \newcommand{\compacttitlespacing}{0} %disable when we need room for authors
+\documentclass[sigconf]{acmart}
+\settopmatter{printacmref=false}
+
+% defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+\usepackage{nicefrac}
+\usepackage{siunitx}
+\usepackage{array,framed}
+\usepackage{booktabs}
+\usepackage{
+  color,
+  float,
+  epsfig,
+  wrapfig,
+  graphics,
+  graphicx,
+  subcaption
+}
+% \usepackage[dvipsnames]{xcolor}
+\usepackage{textcomp,amssymb}
+\usepackage{setspace}
+% \usepackage{amsfonts}
+\usepackage{latexsym,fancyhdr,url}
+\usepackage{enumerate}
+\usepackage{algorithm2e}
+\usepackage{algpseudocode}
+\usepackage{graphics}
+\usepackage{xparse} % argument parsing -- \edist
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{csvsimple}
+\usepackage{balance}
+% \usepackage{flushend}
+% \usepackage{mathptmx,avant}
+
+%%%% Tikz variables, pgfplot
+\usepackage{
+  tikz,
+  pgfplots,
+  pgfplotstable
+}
+
+
+\usepackage{xcolor}
+\usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{
+    language=Matlab,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{mymauve},
+    commentstyle=\color{mygreen},
+    morecomment=[l][\color{mygray}]{\#},
+    frame=single,
+    breaklines=true,
+    numbers=left,
+    numberstyle=\tiny\color{mygray},
+    xleftmargin=2em,
+    framexleftmargin=1.5em,
+    showstringspaces=false,
+    %aboveskip=1ex,
+    %belowskip=1ex
+}
+
+
+\usetikzlibrary{
+  shapes.geometric,
+  arrows,
+  external,
+  pgfplots.groupplots,
+  matrix
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+}
+
+\pgfplotsset{compat=1.9}
+% \tikzexternalize[prefix=images/]
+% \tikzexternalenable
+
+% \pagenumbering{arabic}
+% \pagestyle{plain}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+% \setmathfont{Latin Modern Math}[version=lm]
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+% \DeclareSymbolFont{operators}{T1}{cmr}{m}{n}
+% \DeclareSymbolFont{letters}{OML}{cmm}{m}{it}
+% \DeclareSymbolFont{symbols}{OMS}{cmsy}{m}{n}
+% \DeclareSymbolFont{largesymbols}{OMX}{cmex}{m}{n}
+
+% \usepackage{times}
+
+% \setmathcal{Arial}
+
+% TO deal with the weird flow of boxes
+% \brokenpenalty=1000
+% \clubpenalty=1000
+% \widowpenalty=10
+\DeclareGraphicsExtensions{%
+    .png,.PNG,%
+    .pdf,.PDF,%
+    .jpg,.mps,.jpeg,.jbig2,.jb2,.JPG,.JPEG,.JBIG2,.JB2}
+
+\input{defs}
+\setlength{\belowcaptionskip}{-10pt} 
+\setlength{\footskip}{30pt}
+\setlength{\abovecaptionskip}{5pt plus 3pt minus 2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[switch]{lineno}
+\linenumbers
+\begin{document}
+%\fontfamily{lmr}\selectfont
+% \def\thetitle{A Practical Way to Generate Strong Keys from Noisy Data}
+\fancyhead{}
+\def\thetitle{GNSS lab report}
+\title{\thetitle}
+
+\author{Giorgia Moscato, Angelo Barbera, Alessandro Genova}
+%\affiliation{\small{UW--Madison}}
+
+\date{}
+\input{abstract}
+
+\setcopyright{none} %remove the (c) section
+\acmConference{GNSS lab report}{Torino}{2024}
+\acmPrice{}
+\acmISBN{}
+\acmDOI{}
+
+\maketitle
+\keywords{LaTeX template, ACM CCS, ACM}
+
+% Section I
+\input{intro} 
+
+\input{methodology}
+\input{filters}
+\input{analysis}
+\input{spoofing}
+\input{interference}
+\input{conclusion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bib}
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

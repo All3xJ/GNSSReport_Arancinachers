@@ -1,0 +1,30 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+In conclusion we saw the differences in the estimation of the position varying the environmental conditions. We also performed the previous measurements with the power saver turned on, which could potentially cause discontinuities in the smartphone hardware clock to save battery. However, each device exhibited varying behavior, and the same device displayed different behaviors at different times. Therefore, the effects of power saving mode on smartphone measurements are difficult to predict. This variability depends on its implementation, which is specific to each device and not described by the device producers. Additionally, we found no discernible differences between measurements taken with or without battery saver enabled. After analyzing the different values of mean and standard deviation (std) of Horizontal Dilution of Precision (HDOP) and Carrier-to-Noise Ratio (C/N0) in the specific scenarios, we group them in Table \ref{tab:hdop_cn0} to have a complete picture on measurements. It is evident that the highest mean C/N0 value is observed in the open sky measurement, as anticipated, while the lowest values occur in indoor, walking, and interference scenarios. As for HDOP, optimal values are achieved in open sky and car scenarios, due to the unobstructed view of the sky (this holds true even for the car scenario, as we traveled on a highway with minimal obstacles, avoiding densely built-up areas). On the other hand, the poorest HDOP value is recorded in indoor and interference scenarios. Furthermore, the greatest standard deviation in C/N0 is observed during car, airplane, and walking scenarios, which is expected particularly due to the movement among buildings or at high speeds. For HDOP, the indoor scenario exhibits the highest standard deviation, reflecting the challenges posed by obstructed line of sight conditions.
+
+\vspace{0.5cm}
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|cc|cc|}
+        \hline
+        & \multicolumn{2}{c|}{HDOP} & \multicolumn{2}{c|}{C/N0} \\
+        \cline{2-5}
+        & MEAN & STD & MEAN & STD \\
+        \hline        
+        Open sky & 1.03 & 0.01 & 37.56 & 4.18 \\
+        Indoor & 4.66 & 6.31 & 26.15 & 4.31 \\
+        Walking & 2.91 & 3.92 & 24.39 & 5.87 \\
+        Car & 1.01 & 0.46 & 28.86 & 6.27 \\
+        Airplane & 2.82  & 1.47 & 29.95 & 6.16 \\
+        Interference & 3.32 & 2.72 & 23.9 & 2.83 \\
+        \hline
+    \end{tabular}
+    \vspace{0.5cm}
+    \caption{HDOP and C/N0 \label{tab:hdop_cn0}}
+\end{table}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

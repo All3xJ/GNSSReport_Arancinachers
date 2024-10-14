@@ -1,0 +1,6 @@
+\section{Methodology}
+\label{sec:methodology}
+% it should be bigger. it's written that it's the biggest section of report.
+
+The GNSS data have been collected using the \href{https://github.com/google/gps-measurement-tools/releases}{GNSSLogger analysis app}~\cite{GNSS_logger} on Android smartphones under different conditions (e.g. open sky, 
+indoor, walking, car, airplane, interference) and processed using the \href{https://github.com/google/gps-measurement-tools/releases}{GNSS Analysis MATLAB code}~\cite{GPS_Measurement_tools}. To perform a measurement, all you need to do is open the GNSSLogger app, toggle on the measurements flag (in Home tab) and the measurement time (in Log tab via Timed Logging button) and press the Start log button. You can analyze the measurement using the GNSS Analysis MATLAB code just by editing the input data part of \texttt{ProcessGnssMeasScript.m} with the relative path of the log measurement. The spoofing is also simulated in software using the MATLAB code. 
